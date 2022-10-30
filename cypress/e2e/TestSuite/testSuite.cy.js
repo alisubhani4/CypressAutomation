@@ -29,5 +29,18 @@ describe("Test Suite", { includeShadowDom: true }, () => {
     cart.clickPayNowButton();
     cy.wait(10000);
     cart.fillEmail("zahraimadgill22@gmail.com");
+    cart.fillName("Zahra Imad");
+    cart.fillAddress("4-G Street 22");
+    cart.fillZipCode("54000");
+    cart.fillShippingCity("Lahore");
+    cart.clickPaymentInfo();
+    cy.wait(5000);
+    cart.fillCardNumber(4242424242424242);
+    cart.fillExpiryDate(1226);
+    cart.fillCVC(555);
+    cart.clickCardDetails();
+    cy.wait(5000);
+    cy.scrollTo("top");
+    cart.clickLogoutButton();
   });
 });
